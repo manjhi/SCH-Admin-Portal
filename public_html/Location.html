@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 650px;
+        width: 100%;
+       }
+    </style>
+    <script>
+        function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+        </script>
+  </head>
+  <body onload="JavaScript:AutoRefresh(30000);">
+    <!-- <h3>My Google Maps Demo</h3> -->
+    <div id="map"></div>
+    <!-- <script>
+      function initMap() {
+        var uluru = {lat:26.8219517, lng: 75.8687417};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script> -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV897yLCzw3cXpRRavkmvn_wy6hq3eqoc&callback=initMap">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="Location.js"></script>
+  </body>
+</html>
